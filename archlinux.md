@@ -59,12 +59,19 @@ root@archiso ~ # arch-chroot /mnt
 ```
 
 ### Localization
-Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8.
+Edit `/etc/locale.gen` and uncomment `en_US.UTF-8 UTF-8`.
+```bash
+/etc/locale.gen
+----------------
+#en_SG ISO-8859-1
+en_US.UTF-8 UTF-8
+#en_US ISO-8859-1
 ```
-[root@archiso /]# vim /etc/locale.gen
+Generate locale
+```
 [root@archiso /]# locale-gen
 ```
-Create the locale.conf(5) file, and set the LANG variable accordingly:
+Create the `locale.conf(5)` file, and set the `LANG` variable accordingly:
 ```
 /etc/locale.conf
 ----------------
@@ -72,13 +79,13 @@ LANG=en_US.UTF-8
 ```
 
 ### Network configuration
-Create the hostname file:
+Create the `hostname` file:
 ```
 /etc/hostname
 -------------
 arch
 ```
-Create hosts file:
+Create `hosts` file:
 ```
 /etc/hosts
 -----------------------------
@@ -147,7 +154,7 @@ Recreate the initramfs image.
 ```
 [root@archiso /]# exit
 root@archiso ~ # umount -R /mnt
-reboot
+root@archiso ~ # reboot
 ```
 
 ## Post-installation
