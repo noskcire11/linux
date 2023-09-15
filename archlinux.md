@@ -62,7 +62,7 @@ root@archiso ~ # arch-chroot /mnt
 Edit `/etc/locale.gen` and uncomment `en_US.UTF-8 UTF-8`.
 ```bash
 /etc/locale.gen
-----------------
+-----------------
 #en_SG ISO-8859-1
 en_US.UTF-8 UTF-8
 #en_US ISO-8859-1
@@ -88,7 +88,7 @@ arch
 Create `hosts` file:
 ```
 /etc/hosts
------------------------------
+--------------------------
 127.0.0.1        localhost
 ::1              localhost
 127.0.1.1        arch
@@ -102,7 +102,7 @@ Enable networkmanager
 In case your root filesystem is on LVM, you will need to enable the appropriate mkinitcpio hooks, otherwise your system might not boot. Edit the file and insert `lvm2` between `block` and `filesystems`.
 ```
 /etc/mkinitcpio.conf
---------------------------------------------
+------------------------------------------------
 HOOKS=(base udev ... block lvm2 filesystems ...)
 ```
 Recreate the initramfs image.
