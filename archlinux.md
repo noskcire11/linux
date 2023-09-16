@@ -2,7 +2,7 @@
 
 ### Create and format the EFI partition
 
-`/boot` cannot reside in LVM, you must create a separate `/boot` partition and format it directly. Use the `fdisk` command to create your EFI partitions.
+`/boot` cannot reside in LVM, you must create a separate `/boot` partition and format it directly. Use the `fdisk` command to create your EFI partitions and then format it.
 
 ```
 root@archiso ~ # mkfs.fat -F 32 -n ARCH_EFI /dev/<efi-partition>
