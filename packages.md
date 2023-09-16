@@ -1,7 +1,9 @@
 ### Install keyd
 
 ```bash
-[erickson@arch ~]$ yay -S keyd
+[erickson@arch ~]$ git clone https://github.com/rvaiya/keyd
+[erickson@arch ~]$ cd keyd
+[erickson@arch ~]$ make && sudo make install
 
 /etc/keyd/default.conf
 -------------------------------------------------------------
@@ -16,12 +18,13 @@ capslock = overload(control, esc)
 
 # Remaps the escape key to capslock
 #esc = capslock
+
+[erickson@arch ~]$ sudo systemctl enable --now keyd
 ```
 
 ### Install `fnm` (node version manager)
 
 ```bash
-[erickson@arch ~]$ sudo pacman -S unzip
 [erickson@arch ~]$ curl -fsSL https://fnm.vercel.app/install | bash
 
 ~/.bashrc
