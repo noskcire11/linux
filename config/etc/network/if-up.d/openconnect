@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ "$IFACE" = "vpn0" ]; then
+	ip link set dev vpn0 mtu 1200
+fi
